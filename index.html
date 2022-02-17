@@ -14,20 +14,20 @@
   </head>
   <body class="vh-100">
     <!-- header -->
-    <header class="h-10 bg-primary container">
-        <h1 class="text-center">Digital Cashier</h1>
+    <header class="h-10 container mt-5">
+        <h1 class="text-center text-info fw-bold display-3">Digital Cashier</h1>
     </header>
     <!-- main start  -->
     <main class="h-100">
-        <section class="container bg-secondary">
-            <div class="row g-3 h-100">
+        <section class="container">
+            <div class="row g-3 h-100 py-5">
                 <!-- left site -->
-                <div class="col-sm-12 col-md-6 text-center bg-primary">
+                <div class="col-sm-12 col-md-6 text-center">
                     <img src="./img/money-4.jpg" class="img-fluid left" alt="">
                 </div>
                 <!-- right site  -->
-                <div class="col-sm-12 col-md-6 text-center bg-info container py-5">
-                    <div class="right text-center">
+                <div class="col-sm-12 col-md-6 text-center container right">
+                    <div class="text-center">
                         <!-- income  -->
                         <div class="income my-3">
                             <h4 class="my-3">Income</h4>
@@ -38,7 +38,7 @@
                         </div>
                         <!-- expanses  -->
                         <div class="expanses my-2">
-                            <h4 class="my-3">Expanses</h4>
+                            <h4 class="my-3">Expenses</h4>
                             <!-- food  -->
                             <div class="food my-3 text-center">
                                 <label class="fw-bold me-2" for="food">Food:</label>
@@ -55,7 +55,7 @@
                                 <input class="lh-lg" type="text" placeholder="Enter amount">
                             </div>
                         </div>
-                        <button class="btn btn-light px-5 py-2">Calculate</button>
+                        <button class="btn btn-primary px-5 py-2">Calculate</button>
                         <div class="calculation my-3">
                             <h4>Total Expenses: <span id="total-expenses"></span></h4>
                         </div>

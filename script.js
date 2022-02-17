@@ -3,6 +3,15 @@ function idCatcher(id){
     return document.getElementById(id)
 }
 
+function nanChecking(field,id,screen){
+    if(isNaN(field) && screen == true){
+        idCatcher(id).style.display = 'block';
+    }
+    else{
+        idCatcher(id).style.display = 'none';
+    }
+}
+
 function calculateBalance(){
     //Income input field
     const incomeField = idCatcher('income').value;
@@ -37,6 +46,7 @@ function calculateBalance(){
         idCatcher('total-error').style.display = 'block';
     }
     else{
+        idCatcher('total-error').style.display = 'none';
         idCatcher('total-expenses').innerText = totalCost;
         idCatcher('balance').innerText = balance;
     }

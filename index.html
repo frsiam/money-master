@@ -34,6 +34,7 @@
                             <div class="mx-auto my-3">
                                 <label class="fw-bold me-2" for="income">Income:</label>
                                 <input id="income" class="lh-lg" type="text">
+                                <!-- Income field type error -->
                                 <div id="income-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                     <strong>Warning for Income Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -47,6 +48,7 @@
                             <div class="food my-3 text-center">
                                 <label class="fw-bold me-2" for="food">Food:</label>
                                 <input id="food" class="lh-lg" type="text">
+                                <!-- Food field type error  -->
                                 <div id="food-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                     <strong>Warning  for Food Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -56,6 +58,7 @@
                             <div class="rent my-3 text-center">
                                 <label class="fw-bold me-2" for="rent">Rent:</label>
                                 <input id="rent" class="lh-lg" type="text">
+                                <!-- Rent field type error  -->
                                 <div id="rent-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                     <strong>Warning for Rent Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -65,6 +68,7 @@
                             <div class="cloths my-3 text-center">
                                 <label class="fw-bold me-2" for="cloths">Cloths:</label>
                                 <input id="cloths" class="lh-lg" type="text">
+                                <!-- Cloth field type error  -->
                                 <div id="cloth-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                     <strong>Warning for Cloths Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -72,6 +76,7 @@
                             </div>
                         </div>
                         <button class="btn btn-info px-5 lh-lg py-2 my-4 fw-bold" onclick="calculateBalance()">Calculate</button>
+                        <!-- If income money is less than expenses money then this error show  -->
                         <div id="total-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
                             <strong>Warning Total!</strong> You have not enough money for expense!
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -87,13 +92,15 @@
                             <input id="save" type="text" class="lh-lg w-25">
                             <span class="mx-2 fw-bold">%</span>
                             <button class="btn btn-info px-5 lh-lg fw-bold" onclick="savingsCalculate()">SAVE</button>
-                            <div id="save-error-one" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                                <strong>Warning for Save Field!</strong> You should input a number !
+                            <!-- Save field type error  -->
+                            <div id="save-error-one" class="error alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                                <strong>Warning Savings!</strong> You should input a number !
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         </div>
-                        <div id="save-error" class="error alert alert-primary alert-dismissible fade show mt-2" role="alert">
-                            <strong>Warning for Savings!</strong> You should input a number !
+                        <!-- if savings money is greater than Income than this error message show  -->
+                        <div id="save-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                            <strong>Warning for Savings!</strong> You have not enough money for savings !
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         <div class="saving-amount my-2">

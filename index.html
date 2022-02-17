@@ -21,28 +21,39 @@
     <main class="h-100">
         <section class="container bg-secondary">
             <div class="row g-3 h-100">
+                <!-- left site -->
                 <div class="col-sm-12 col-md-6 text-center bg-primary">
                     <img src="./img/money-4.jpg" class="img-fluid left" alt="">
                 </div>
+                <!-- right site  -->
                 <div class="col-sm-12 col-md-6 text-center bg-info container">
-                    <div class="income">
-                        <h4>Income</h4>
-                    <label for="income">Income</label>
-                    <input type="text">
-                    </div>
-                    <div class="expanses">
-                        <h4>Expanses</h4>
-                        <div class="food">
-                            <label for="food">Food:</label>
-                            <input type="text">
+                    <div class="right text-center">
+                        <!-- income  -->
+                        <div class="income">
+                            <h4>Income</h4>
+                            <div class="w-50 text-center mx-auto">
+                                <label class="form-label" for="income">Income:</label>
+                                <input class="form-control" type="text" placeholder="Enter amount">
+                            </div>
                         </div>
-                        <div class="rent">
-                            <label for="rent">Rent:</label>
-                            <input type="text">
-                        </div>
-                        <div class="cloths">
-                            <label for="cloths">Cloths:</label>
-                            <input type="text">
+                        <!-- expanses  -->
+                        <div class="expanses">
+                            <h4>Expanses</h4>
+                            <!-- food  -->
+                            <div class="food my-3 text-center">
+                                <label for="food">Food:</label>
+                                <input type="text" placeholder="Enter amount">
+                            </div>
+                            <!-- rent  -->
+                            <div class="rent my-3 text-center">
+                                <label for="rent">Rent:</label>
+                                <input type="text" placeholder="Enter amount">
+                            </div>
+                            <!-- cloths  -->
+                            <div class="cloths my-3 text-center">
+                                <label for="cloths">Cloths:</label>
+                                <input type="text" placeholder="Enter amount">
+                            </div>
                         </div>
                     </div>
                 </div>

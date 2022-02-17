@@ -12,3 +12,6 @@ input{
 .right{
     background-color: #dfe8e7;
 }
+.error{
+    display: none;
+}

@@ -26,34 +26,38 @@
                     <img src="./img/money-4.jpg" class="img-fluid left" alt="">
                 </div>
                 <!-- right site  -->
-                <div class="col-sm-12 col-md-6 text-center bg-info container">
+                <div class="col-sm-12 col-md-6 text-center bg-info container py-5">
                     <div class="right text-center">
                         <!-- income  -->
-                        <div class="income">
-                            <h4>Income</h4>
-                            <div class="w-50 text-center mx-auto">
-                                <label class="form-label" for="income">Income:</label>
-                                <input class="form-control" type="text" placeholder="Enter amount">
+                        <div class="income my-3">
+                            <h4 class="my-3">Income</h4>
+                            <div class="mx-auto my-3">
+                                <label class="fw-bold me-2" for="income">Income:</label>
+                                <input class="lh-lg" type="text" placeholder="Enter amount">
                             </div>
                         </div>
                         <!-- expanses  -->
-                        <div class="expanses">
-                            <h4>Expanses</h4>
+                        <div class="expanses my-2">
+                            <h4 class="my-3">Expanses</h4>
                             <!-- food  -->
                             <div class="food my-3 text-center">
-                                <label for="food">Food:</label>
-                                <input type="text" placeholder="Enter amount">
+                                <label class="fw-bold me-2" for="food">Food:</label>
+                                <input class="lh-lg" type="text" placeholder="Enter amount">
                             </div>
                             <!-- rent  -->
                             <div class="rent my-3 text-center">
-                                <label for="rent">Rent:</label>
-                                <input type="text" placeholder="Enter amount">
+                                <label class="fw-bold me-2" for="rent">Rent:</label>
+                                <input class="lh-lg" type="text" placeholder="Enter amount">
                             </div>
                             <!-- cloths  -->
                             <div class="cloths my-3 text-center">
-                                <label for="cloths">Cloths:</label>
-                                <input type="text" placeholder="Enter amount">
+                                <label class="fw-bold me-2" for="cloths">Cloths:</label>
+                                <input class="lh-lg" type="text" placeholder="Enter amount">
                             </div>
+                        </div>
+                        <button class="btn btn-light px-5 py-2">Calculate</button>
+                        <div class="calculation my-3">
+                            <h4>Total Expenses: <span id="total-expenses"></span></h4>
                         </div>
                     </div>
                 </div>

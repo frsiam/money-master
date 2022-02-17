@@ -42,10 +42,32 @@ function calculateBalance(){
     }
 
 
-
+    return balance;
 
     // idCatcher('income').value = '';
     // idCatcher('food').value = '';
     // idCatcher('rent').value = '';
     // idCatcher('cloths').value = '';
+}
+
+//savings calculation
+function savingsCalculate(){
+    const saveField = idCatcher('save').value;
+    const saveInput = parseFloat(saveField);
+    if(isNaN(saveField)){
+        idCatcher('save-error-one').style.display = 'block';
+    }
+    else{
+        idCatcher('save-error-one').style.display = 'none';
+    }
+    const savingsAmount = parseFloat(idCatcher('income').value) * (saveInput/100);
+    const remainingBalance = calculateBalance() - savingsAmount;
+    if(calculateBalance() < savingsAmount){
+        idCatcher('save-error').style.display = 'block'
+    }
+    else{
+        idCatcher('save-error').style.display = 'none'
+        idCatcher('saving-amount').innerText = savingsAmount;
+        idCatcher('remaining-amount').innerText = remainingBalance;
+    }
 }

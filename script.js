@@ -5,6 +5,22 @@ function idCatcher(id){
 
 function calculateBalance(){
     //Income input field
-    const myIncome = idCatcher('income').value;
-    const incomeInput = parseFloat(myIncome);
+    const incomeField = idCatcher('income').value;
+    const incomeInput = parseFloat(incomeField);
+    //Expensess input field
+    const foodField = idCatcher('food').value;
+    const foodInput = parseFloat(foodField);
+
+    const rentField = idCatcher('rent').value;
+    const rentInput = parseFloat(rentField);
+    // console.log(rentField)
+
+    const clothField = idCatcher('cloths').value;
+    const clothInput = parseFloat(clothField);
+    /* if(isNaN(clothInput)){
+        return alert('thik ase')
+    }
+    else{
+        return alert('sorry')
+    } */
 }

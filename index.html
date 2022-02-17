@@ -10,7 +10,7 @@
     <!-- External css stylesheet  -->
     <link rel="stylesheet" href="./style.css">
 
-    <title>Mad Money</title>
+    <title>Money Calculator</title>
   </head>
   <body class="vh-100 body-bg bg-dark">
     <!-- header -->
@@ -23,10 +23,10 @@
             <div class="row gy-3 gx-5 h-100 pt-2 pb-5">
                 <!-- left site -->
                 <div class="col-sm-12 col-md-6 text-center rounded">
-                    <img src="./img/money-4.jpg" class="img-fluid left rounded border border-primary" alt="">
+                    <img src="./img/money-4.jpg" class="img-fluid left rounded border border-light" alt="">
                 </div>
                 <!-- right site  -->
-                <div class="col-sm-12 col-md-6 text-center right py-2 border border-primary rounded">
+                <div class="col-sm-12 col-md-6 text-center right py-2 border border-light rounded">
                     <div class="text-center">
                         <!-- income  -->
                         <div class="income my-3">
@@ -78,7 +78,7 @@
                         <button class="btn btn-info px-5 lh-lg py-2 my-4 fw-bold" onclick="calculateBalance()">Calculate</button>
                         <!-- If income money is less than expenses money then this error show  -->
                         <div id="total-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                            <strong>Warning Total!</strong> You have not enough money for expense!
+                            <strong>Warning Total !</strong> You have not enough money for expense !
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         <div class="total-expenses my-2">
@@ -100,7 +100,7 @@
                         </div>
                         <!-- if savings money is greater than Income than this error message show  -->
                         <div id="save-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                            <strong>Warning for Savings!</strong> You have not enough money for savings !
+                            <strong>Warning for Savings !</strong> You have not enough money for savings !
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         <div class="saving-amount my-2">

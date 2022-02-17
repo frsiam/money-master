@@ -1,8 +1,10 @@
 // Catch the neccessary element by calling this common function which accepts id as a perameter 
+
 function idCatcher(id){
     return document.getElementById(id)
 }
 
+//For diplay alert block and none by using this function
 function nanChecking(field,id){
     if(isNaN(field)){
         idCatcher(id + '-error').style.display = 'block';
@@ -15,47 +17,45 @@ function nanChecking(field,id){
     }
 }
 
+//Main calculation by using this function
 function calculateBalance(){
     //Income input field
     const incomeField = idCatcher('income').value;
     const incomeInput = parseFloat(incomeField);
-
     nanChecking(incomeField,'income')
     //Expensess input field
     //For food cost
     const foodField = idCatcher('food').value;
     const foodInput = parseFloat(foodField);
-
     nanChecking(foodField,'food');
     //For rent cost
     const rentField = idCatcher('rent').value;
     const rentInput = parseFloat(rentField);
-
     nanChecking(rentField,'rent')
     //For cloth cost
     const clothField = idCatcher('cloths').value;
     const clothInput = parseFloat(clothField);
-
     nanChecking(clothField,'cloth')
     // Total Expenses 
     const totalCost = foodInput + rentInput + clothInput;
     const balance = incomeInput - totalCost;
-    if(incomeInput < totalCost){
-        idCatcher('total-error').style.display = 'block';
+    //check if one field have en erron than the total expenses and balance can't update
+    if(nanChecking(incomeField,'income')==true || nanChecking(foodField,'food')==true || nanChecking(rentField,'rent')==true || nanChecking(clothField,'cloth')==true){
+        idCatcher('total-error').style.display = 'none';
+        idCatcher('total-expenses').innerText = '';
+        idCatcher('balance').innerText = '';
     }
     else{
-        idCatcher('total-error').style.display = 'none';
-        idCatcher('total-expenses').innerText = totalCost;
-        idCatcher('balance').innerText = balance;
+        if(incomeInput < totalCost){
+            idCatcher('total-error').style.display = 'block';
+        }
+        else{
+            idCatcher('total-error').style.display = 'none';
+            idCatcher('total-expenses').innerText = totalCost;
+            idCatcher('balance').innerText = balance;
+        }
     }
-
-
     return balance;
-
-    // idCatcher('income').value = '';
-    // idCatcher('food').value = '';
-    // idCatcher('rent').value = '';
-    // idCatcher('cloths').value = '';
 }
 
 //savings calculation
@@ -63,7 +63,7 @@ function savingsCalculate(){
     const saveField = idCatcher('save').value;
     const saveInput = parseFloat(saveField);
 
-    nanChecking(saveField,'save-error-one')
+    nanChecking(saveField,'save-one')
     const savingsAmount = parseFloat(idCatcher('income').value) * (saveInput/100);
     const remainingBalance = calculateBalance() - savingsAmount;
     if(calculateBalance() < savingsAmount){

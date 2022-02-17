@@ -30,14 +30,22 @@ function calculateBalance(){
     if(isNaN(clothField)){
         idCatcher('cloth-error').style.display = 'block';
     }
-    /* if(isNaN(clothInput)){
-        return alert('thik ase')
+    // Total Expenses 
+    const totalCost = foodInput + rentInput + clothInput;
+    const balance = incomeInput - totalCost;
+    if(incomeInput < totalCost){
+        idCatcher('total-error').style.display = 'block';
     }
     else{
-        return alert('sorry')
-    } */
-    idCatcher('income').value = '';
-    idCatcher('food').value = '';
-    idCatcher('rent').value = '';
-    idCatcher('cloths').value = '';
+        idCatcher('total-expenses').innerText = totalCost;
+        idCatcher('balance').innerText = balance;
+    }
+
+
+
+
+    // idCatcher('income').value = '';
+    // idCatcher('food').value = '';
+    // idCatcher('rent').value = '';
+    // idCatcher('cloths').value = '';
 }

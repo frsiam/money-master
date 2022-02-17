@@ -35,7 +35,7 @@
                                 <label class="fw-bold me-2" for="income">Income:</label>
                                 <input id="income" class="lh-lg" type="text">
                                 <div id="income-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                                    <strong>Warning!</strong> You should input a number !
+                                    <strong>Warning for Income Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                 <label class="fw-bold me-2" for="food">Food:</label>
                                 <input id="food" class="lh-lg" type="text">
                                 <div id="food-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                                    <strong>Warning!</strong> You should input a number !
+                                    <strong>Warning  for Food Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@
                                 <label class="fw-bold me-2" for="rent">Rent:</label>
                                 <input id="rent" class="lh-lg" type="text">
                                 <div id="rent-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                                    <strong>Warning!</strong> You should input a number !
+                                    <strong>Warning for Rent Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>
@@ -66,17 +66,21 @@
                                 <label class="fw-bold me-2" for="cloths">Cloths:</label>
                                 <input id="cloths" class="lh-lg" type="text">
                                 <div id="cloth-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
-                                    <strong>Warning!</strong> You should input a number !
+                                    <strong>Warning for Cloths Field!</strong> You should input a number !
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </div>
                         </div>
                         <button class="btn btn-info px-5 lh-lg py-2 my-4 fw-bold" onclick="calculateBalance()">Calculate</button>
-                        <div class="total-expenses my-2">
-                            <h4>Total Expenses: <span id="total-expenses"></span></h4>
+                        <div id="total-error" class="error alert alert-danger alert-dismissible fade show mt-2" role="alert">
+                            <strong>Warning Total!</strong> You have not enough money for expense!
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                        <div class="remaining-balance my-2">
-                            <h4>Balance: <span id="balance"></span></h4>
+                        <div class="total-expenses my-2">
+                            <h5>Total Expenses: <span id="total-expenses"></span></h5>
+                        </div>
+                        <div class="remaining-balance mb-5 mt-3">
+                            <h5>Balance: <span id="balance"></span></h5>
                         </div>
                         <div class="savings">
                             <span class="fw-bold me-2">Save:</span>

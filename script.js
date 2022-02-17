@@ -3,12 +3,15 @@ function idCatcher(id){
     return document.getElementById(id)
 }
 
-function nanChecking(field,id,screen){
-    if(isNaN(field) && screen == true){
-        idCatcher(id).style.display = 'block';
+function nanChecking(field,id){
+    if(isNaN(field)){
+        idCatcher(id + '-error').style.display = 'block';
+        idCatcher(id).value = '';
+        return true
     }
     else{
-        idCatcher(id).style.display = 'none';
+        idCatcher(id + '-error').style.display = 'none';
+        return false
     }
 }
 
@@ -16,29 +19,24 @@ function calculateBalance(){
     //Income input field
     const incomeField = idCatcher('income').value;
     const incomeInput = parseFloat(incomeField);
-    if(isNaN(incomeField)){
-        idCatcher('income-error').style.display = 'block';
-    }
+
+    nanChecking(incomeField,'income')
     //Expensess input field
     //For food cost
     const foodField = idCatcher('food').value;
     const foodInput = parseFloat(foodField);
-    if(isNaN(foodField)){
-        idCatcher('food-error').style.display = 'block';
-    }
+
+    nanChecking(foodField,'food');
     //For rent cost
     const rentField = idCatcher('rent').value;
     const rentInput = parseFloat(rentField);
-    if(isNaN(rentField)){
-        idCatcher('rent-error').style.display = 'block';
-    }
 
+    nanChecking(rentField,'rent')
     //For cloth cost
     const clothField = idCatcher('cloths').value;
     const clothInput = parseFloat(clothField);
-    if(isNaN(clothField)){
-        idCatcher('cloth-error').style.display = 'block';
-    }
+
+    nanChecking(clothField,'cloth')
     // Total Expenses 
     const totalCost = foodInput + rentInput + clothInput;
     const balance = incomeInput - totalCost;
@@ -64,12 +62,8 @@ function calculateBalance(){
 function savingsCalculate(){
     const saveField = idCatcher('save').value;
     const saveInput = parseFloat(saveField);
-    if(isNaN(saveField)){
-        idCatcher('save-error-one').style.display = 'block';
-    }
-    else{
-        idCatcher('save-error-one').style.display = 'none';
-    }
+
+    nanChecking(saveField,'save-error-one')
     const savingsAmount = parseFloat(idCatcher('income').value) * (saveInput/100);
     const remainingBalance = calculateBalance() - savingsAmount;
     if(calculateBalance() < savingsAmount){

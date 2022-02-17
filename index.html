@@ -20,13 +20,13 @@
     <!-- main start  -->
     <main class="h-100">
         <section class="container">
-            <div class="row g-3 h-100 py-5">
+            <div class="row gy-3 gx-5 h-100 py-5">
                 <!-- left site -->
                 <div class="col-sm-12 col-md-6 text-center">
                     <img src="./img/money-4.jpg" class="img-fluid left" alt="">
                 </div>
                 <!-- right site  -->
-                <div class="col-sm-12 col-md-6 text-center container right py-2">
+                <div class="col-sm-12 col-md-6 text-center right py-2">
                     <div class="text-center">
                         <!-- income  -->
                         <div class="income my-3">
@@ -55,24 +55,24 @@
                                 <input id="cloths" class="lh-lg" type="text">
                             </div>
                         </div>
-                        <button id="calculate-btn" class="btn btn-info px-5 lh-lg py-2 my-4">Calculate</button>
+                        <button class="btn btn-info px-5 lh-lg py-2 my-4 fw-bold" onclick="calculateBalance()">Calculate</button>
                         <div class="total-expenses my-2">
                             <h4>Total Expenses: <span id="total-expenses"></span></h4>
                         </div>
                         <div class="remaining-balance my-2">
-                            <h4>balance: <span id="balance"></span></h4>
+                            <h4>Balance: <span id="balance"></span></h4>
                         </div>
                         <div class="savings">
                             <span class="fw-bold me-2">Save:</span>
                             <input id="save" type="text" class="lh-lg w-25">
                             <span class="mx-2 fw-bold">%</span>
-                            <button id="save-btn" class="btn btn-info px-5 lh-lg">SAVE</button>
+                            <button id="save-btn" class="btn btn-info px-5 lh-lg fw-bold">SAVE</button>
                         </div>
                         <div class="saving-amount my-2">
-                            <h4>Saving Amount: <span id="saving-amount"></span></h4>
+                            <h5>Saving Amount: <span id="saving-amount"></span></h5>
                         </div>
                         <div class="remaining-amount mt-2">
-                            <h4>Remaining-amount: <span id="remaining-amount"></span></h4>
+                            <h5>Remaining-amount: <span id="remaining-amount"></span></h5>
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,10 @@ img{
 }
 input{
     outline: none;
-    border: 2px solid gray;
+    border: 1px solid gray;
     background: #b2dbd7;
+    font-weight: 500;
+    font-size: 18px;
 }
 .right{
     background-color: #dfe8e7;

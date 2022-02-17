@@ -26,14 +26,14 @@
                     <img src="./img/money-4.jpg" class="img-fluid left" alt="">
                 </div>
                 <!-- right site  -->
-                <div class="col-sm-12 col-md-6 text-center container right">
+                <div class="col-sm-12 col-md-6 text-center container right py-2">
                     <div class="text-center">
                         <!-- income  -->
                         <div class="income my-3">
                             <h4 class="my-3">Income</h4>
                             <div class="mx-auto my-3">
                                 <label class="fw-bold me-2" for="income">Income:</label>
-                                <input class="lh-lg" type="text" placeholder="Enter amount">
+                                <input id="income" class="lh-lg" type="text">
                             </div>
                         </div>
                         <!-- expanses  -->
@@ -42,22 +42,37 @@
                             <!-- food  -->
                             <div class="food my-3 text-center">
                                 <label class="fw-bold me-2" for="food">Food:</label>
-                                <input class="lh-lg" type="text" placeholder="Enter amount">
+                                <input id="food" class="lh-lg" type="text">
                             </div>
                             <!-- rent  -->
                             <div class="rent my-3 text-center">
                                 <label class="fw-bold me-2" for="rent">Rent:</label>
-                                <input class="lh-lg" type="text" placeholder="Enter amount">
+                                <input id="rent" class="lh-lg" type="text">
                             </div>
                             <!-- cloths  -->
                             <div class="cloths my-3 text-center">
                                 <label class="fw-bold me-2" for="cloths">Cloths:</label>
-                                <input class="lh-lg" type="text" placeholder="Enter amount">
+                                <input id="cloths" class="lh-lg" type="text">
                             </div>
                         </div>
-                        <button class="btn btn-primary px-5 py-2">Calculate</button>
-                        <div class="calculation my-3">
+                        <button id="calculate-btn" class="btn btn-info px-5 lh-lg py-2 my-4">Calculate</button>
+                        <div class="total-expenses my-2">
                             <h4>Total Expenses: <span id="total-expenses"></span></h4>
+                        </div>
+                        <div class="remaining-balance my-2">
+                            <h4>balance: <span id="balance"></span></h4>
+                        </div>
+                        <div class="savings">
+                            <span class="fw-bold me-2">Save:</span>
+                            <input id="save" type="text" class="lh-lg w-25">
+                            <span class="mx-2 fw-bold">%</span>
+                            <button id="save-btn" class="btn btn-info px-5 lh-lg">SAVE</button>
+                        </div>
+                        <div class="saving-amount my-2">
+                            <h4>Saving Amount: <span id="saving-amount"></span></h4>
+                        </div>
+                        <div class="remaining-amount mt-2">
+                            <h4>Remaining-amount: <span id="remaining-amount"></span></h4>
                         </div>
                     </div>
                 </div>
